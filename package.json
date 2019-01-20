@@ -1,6 +1,6 @@
 {
   "name": "@ninetynine/call",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small package containing a helper function to call single or multiple functions",
   "main": "lib/index.js",
   "scripts": {

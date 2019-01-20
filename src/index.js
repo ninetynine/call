@@ -9,7 +9,13 @@ const call = (fn, args) => {
     return
   }
 
-  fn(...args)
+  if (Array.isArray(args)) {
+    fn(...args)
+
+    return
+  }
+
+  fn(args)
 }
 
 module.exports = call
