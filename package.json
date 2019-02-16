@@ -1,12 +1,13 @@
 {
   "name": "@ninetynine/call",
-  "version": "1.0.1",
-  "description": "A small package containing a helper function to call single or multiple functions",
+  "version": "1.1.0",
+  "description": "A small package containing helper functions to call single or multiple functions",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node ./node_modules/.bin/babel src/ --out-dir lib/",
-    "lint": "node ./node_modules/.bin/standard"
+    "lint": "node ./node_modules/.bin/standard",
+    "prepublishOnly": "npm run lint && NODE_ENV=prod npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
   "homepage": "https://github.com/ninetynine/call#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && NODE_ENV=prod npm run build"
+      "pre-commit": "npm run prepublishOnly"
     }
   },
   "devDependencies": {
